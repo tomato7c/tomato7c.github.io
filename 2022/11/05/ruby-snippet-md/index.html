@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="John Doe" />
+  <meta name="description" content="" />
+  
+  
+  <title>
+    
+      ruby-snippet.md 
+      
+      
+      |
+    
+     Hexo
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
+  
+
+  <!-- jquery3.3.1 -->
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
+
+  <!-- fancybox -->
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">Oranges</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">Archives</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">Tags</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">About</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">ruby-snippet.md</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2022-11-05 00:55:29
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/ruby/" title="ruby">
+                    #ruby
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h2 id="Primitive-elements"><a href="#Primitive-elements" class="headerlink" title="Primitive elements"></a>Primitive elements</h2><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="comment">#参数默认值，对象，属性</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Work</span></span><br><span class="line">	<span class="keyword">attr_accessor</span> <span class="symbol">:mode</span>, <span class="symbol">:name</span>  <span class="comment"># 让mode,name意义被外部访问</span></span><br><span class="line">	<span class="keyword">def</span> <span class="title function_">initialize</span>(<span class="params">mode = <span class="string">&quot;955&quot;</span>, name = <span class="string">&quot;factory&quot;</span></span>)</span><br><span class="line">		<span class="variable">@mode</span> = mode</span><br><span class="line">		<span class="variable">@name</span> = name</span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">def</span> <span class="title function_">show</span>()</span><br><span class="line">		puts <span class="string">&quot;fuck you <span class="subst">#&#123;<span class="variable">@mode</span>&#125;</span>, fuck you <span class="subst">#&#123;<span class="variable">@name</span>&#125;</span>&quot;</span></span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">def</span> <span class="title function_">show1</span>()</span><br><span class="line">		puts <span class="string">&quot;fuck you <span class="subst">#&#123;<span class="variable">@mode</span>&#125;</span>&quot;</span></span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment"># 简介下两个函数instance_methods, respond_to?</span></span><br><span class="line">puts Work.instance_methods(<span class="literal">false</span>)</span><br><span class="line"></span><br><span class="line">w = <span class="title class_">Work</span>.new(<span class="number">996</span>, <span class="string">&quot;a&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (w.respond_to?(<span class="string">&quot;show&quot;</span>))</span><br><span class="line">	w.send(<span class="string">&quot;show&quot;</span>) <span class="comment"># 执行方法</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">w.mode = <span class="string">&quot;007&quot;</span></span><br><span class="line">w.name = <span class="string">&quot;b&quot;</span></span><br><span class="line">w.show</span><br></pre></td></tr></table></figure>
+
+<h4 id="flow-control"><a href="#flow-control" class="headerlink" title="flow control"></a>flow control</h4><p><strong>loop</strong></p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">gamelist = [<span class="string">&quot;塞尔达&quot;</span>,<span class="string">&quot;屌妹妹&quot;</span>,<span class="string">&quot;GTA&quot;</span>]</span><br><span class="line"><span class="comment"># for loop</span></span><br><span class="line"><span class="keyword">for</span> it <span class="keyword">in</span> gamelist <span class="keyword">do</span></span><br><span class="line">	puts it</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment"># for loop 1..5 stands for [1,5]; and 1...5 stands for until, it is so stupid:P</span></span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> <span class="number">1</span>...<span class="number">5</span> <span class="keyword">do</span></span><br><span class="line">	puts num</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment"># while loop</span></span><br><span class="line">index = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> index &lt; <span class="number">4</span> <span class="keyword">do</span></span><br><span class="line">	index += <span class="number">1</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p><strong>special loop</strong></p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">gamelist = [<span class="string">&quot;塞尔达&quot;</span>,<span class="string">&quot;屌妹妹&quot;</span>,<span class="string">&quot;GTA&quot;</span>]</span><br><span class="line"><span class="comment"># each loop</span></span><br><span class="line">gamelist.each <span class="keyword">do</span> |<span class="params">it</span>|</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment"># like zipWithIndex in scala</span></span><br><span class="line">gamelist.each_with_index <span class="keyword">do</span> |<span class="params">it, index</span>|</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment"># times loop, loop for 1,2,3,4</span></span><br><span class="line"><span class="number">5</span>.times <span class="keyword">do</span> |<span class="params">i</span>|</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment"># step loop, loop for 1,4,7,10</span></span><br><span class="line"><span class="number">1</span>.step(<span class="number">10</span>, <span class="number">3</span>) <span class="keyword">do</span> |<span class="params">i</span>|</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment"># upto, loop for 2,3,4,5</span></span><br><span class="line"><span class="number">2</span>.upto(<span class="number">5</span>) <span class="keyword">do</span> |<span class="params">i</span>|</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment"># downto, loop for 5,4,3,2</span></span><br><span class="line"><span class="number">5</span>.downto(<span class="number">2</span>) <span class="keyword">do</span> |<span class="params">i</span>|</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p><strong>exception</strong></p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="keyword">begin</span></span><br><span class="line">	puts <span class="string">&quot;可能出错&quot;</span></span><br><span class="line"><span class="keyword">rescue</span> TypeError =&gt; e</span><br><span class="line">	<span class="comment"># something error occured</span></span><br><span class="line">	puts e</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	<span class="comment"># no error occured</span></span><br><span class="line">	puts <span class="string">&quot;no error&quot;</span></span><br><span class="line"><span class="keyword">ensure</span></span><br><span class="line">	puts <span class="string">&quot;一定会执行&quot;</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h4 id="data-struct"><a href="#data-struct" class="headerlink" title="data struct"></a>data struct</h4><p>array and hash</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="comment"># data struct</span></span><br><span class="line"><span class="comment"># definition an array</span></span><br><span class="line">games = [<span class="string">&quot;fuck&quot;</span>, <span class="string">&quot;you&quot;</span>, <span class="string">&quot;kuaishou&quot;</span>]</span><br><span class="line">puts games</span><br><span class="line"><span class="comment"># loop the array</span></span><br><span class="line">games.each <span class="keyword">do</span> |<span class="params">it</span>|</span><br><span class="line">	puts <span class="string">&quot;heiheihei <span class="subst">#&#123;it&#125;</span>&quot;</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment"># loop with index (like zipWithIndex in scala)</span></span><br><span class="line">games.each_with_index <span class="keyword">do</span> |<span class="params">it, i</span>|</span><br><span class="line">	puts <span class="string">&quot;<span class="subst">#&#123;it&#125;</span> <span class="subst">#&#123;i&#125;</span>&quot;</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">puts games.join(<span class="string">&quot; &quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># define the hash map</span></span><br><span class="line">map = &#123;</span><br><span class="line">	<span class="string">&quot;name&quot;</span> =&gt; <span class="string">&quot;Lucy&quot;</span>,</span><br><span class="line">	<span class="string">&quot;age&quot;</span> =&gt; <span class="number">225</span></span><br><span class="line">&#125;</span><br><span class="line">puts map[<span class="string">&quot;name&quot;</span>]</span><br><span class="line"><span class="comment"># another form</span></span><br><span class="line">map = &#123;</span><br><span class="line">	<span class="symbol">name:</span> <span class="string">&quot;Lucy&quot;</span>,</span><br><span class="line">	<span class="symbol">age:</span> <span class="number">225</span></span><br><span class="line">&#125;</span><br><span class="line">puts map[<span class="symbol">:name</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="Object-oriend-Programming"><a href="#Object-oriend-Programming" class="headerlink" title="Object-oriend Programming"></a>Object-oriend Programming</h2><h4 id="variable"><a href="#variable" class="headerlink" title="variable"></a>variable</h4><p>@x instance variable<br>@@x class variable<br>$x global variable<br>x local variable</p>
+<h4 id="method"><a href="#method" class="headerlink" title="method"></a>method</h4><h6 id="instance-method"><a href="#instance-method" class="headerlink" title="instance method"></a>instance method</h6><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Work</span></span><br><span class="line">	<span class="keyword">def</span> <span class="title function_">initialize</span>(<span class="params">mode, name</span>)</span><br><span class="line">		<span class="variable">@mode</span> = mode</span><br><span class="line">		<span class="variable">@name</span> = name</span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line">	<span class="keyword">def</span> <span class="title function_">show</span>() </span><br><span class="line">		puts <span class="string">&quot;fuck you <span class="subst">#&#123;<span class="variable">@mode</span>&#125;</span>&quot;</span></span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h6 id="class-method"><a href="#class-method" class="headerlink" title="class method"></a>class method</h6><figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Work</span></span><br><span class="line">    <span class="keyword">attr_accessor</span> <span class="symbol">:mode</span>   generate getter <span class="keyword">and</span> setter</span><br><span class="line">    <span class="keyword">attr_reader</span> <span class="symbol">:name</span> generate getter</span><br><span class="line"></span><br><span class="line">	<span class="keyword">def</span> <span class="title function_">initialize</span>(<span class="params">mode, name</span>)</span><br><span class="line">		<span class="variable">@mode</span> = mode</span><br><span class="line">		<span class="variable">@name</span> = name</span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line">    <span class="comment"># class method, self on behalf of the class Work identity</span></span><br><span class="line">	<span class="keyword">def</span> <span class="title function_">self</span>.toStrrrr</span><br><span class="line">		puts <span class="string">&quot;toStrrrrrrr&quot;</span></span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment"># invoke static mothed</span></span><br><span class="line">Work.toStrrrr</span><br><span class="line">Work::toStrrrr</span><br></pre></td></tr></table></figure>
+<h4 id="module"><a href="#module" class="headerlink" title="module"></a>module</h4><p>like interface in Java…<br>include: mixin module instance methods as class’ instance methods<br>extend: mixni module instance methods as class’ class methods</p>
+<h2 id="exception"><a href="#exception" class="headerlink" title="exception"></a>exception</h2><p>raise</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">bar</span></span><br><span class="line">    <span class="comment"># runtime error</span></span><br><span class="line">    raise <span class="string">&quot;我yue了&quot;</span> <span class="keyword">unless</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># specify error</span></span><br><span class="line">	raise ArgumentError, <span class="string">&quot;我yue了&quot;</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">bar</span><br></pre></td></tr></table></figure>
+
+<h2 id="module-example"><a href="#module-example" class="headerlink" title="module example"></a>module example</h2><p><strong>enumerable</strong></p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="comment"># search and filter</span></span><br><span class="line"><span class="symbol">:all?</span></span><br><span class="line"><span class="symbol">:any?</span></span><br><span class="line"><span class="symbol">:detect</span> (<span class="keyword">alias</span> <span class="symbol">:find</span>)</span><br><span class="line"><span class="symbol">:drop</span></span><br><span class="line"><span class="symbol">:find_all</span></span><br><span class="line"><span class="symbol">:find_index</span></span><br><span class="line"><span class="symbol">:include?</span></span><br><span class="line"><span class="symbol">:none?</span></span><br><span class="line"><span class="symbol">:one?</span></span><br><span class="line"><span class="symbol">:reject</span></span><br><span class="line"><span class="symbol">:select</span></span><br><span class="line"><span class="comment"># grouping</span></span><br><span class="line"><span class="symbol">:chunk</span></span><br><span class="line"><span class="symbol">:group_by</span></span><br><span class="line"><span class="symbol">:partition</span></span><br><span class="line"><span class="comment"># iterate</span></span><br><span class="line"><span class="symbol">:cycle</span></span><br><span class="line"><span class="symbol">:each</span></span><br><span class="line"><span class="symbol">:each_slice</span></span><br><span class="line"><span class="symbol">:each_with_index</span></span><br><span class="line"><span class="symbol">:reverse_each</span></span><br><span class="line"><span class="comment"># abstruct map</span></span><br><span class="line"><span class="symbol">:each_with_object</span></span><br><span class="line"><span class="symbol">:flat_map</span></span><br><span class="line"><span class="symbol">:map</span></span><br><span class="line"><span class="symbol">:inject</span></span><br><span class="line"><span class="symbol">:sort</span></span><br><span class="line"><span class="symbol">:zip</span></span><br><span class="line"><span class="comment"># stats</span></span><br><span class="line"><span class="symbol">:count</span></span><br><span class="line"><span class="symbol">:max</span>  <span class="symbol">:max_by</span></span><br><span class="line"><span class="symbol">:min</span>  <span class="symbol">:min_by</span></span><br><span class="line"><span class="symbol">:minmax</span> <span class="symbol">:minmax_by</span></span><br><span class="line"><span class="comment"># lazy</span></span><br><span class="line"><span class="symbol">:lazy</span></span><br></pre></td></tr></table></figure>
+<p><strong>comparable (how to make your class comparable)</strong></p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span></span><br><span class="line">    <span class="keyword">attr_reader</span> <span class="symbol">:name</span></span><br><span class="line">    <span class="keyword">include</span> Comparable</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">initializer</span>(<span class="params">name</span>)</span><br><span class="line">        <span class="variable">@name</span> = name</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">&lt;=&gt;</span> other</span><br><span class="line">        <span class="variable language_">self</span>.name &lt;=&gt; other.name</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Library"><a href="#Library" class="headerlink" title="Library"></a>Library</h2><p><strong>File</strong></p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">File.open(<span class="string">&quot;/Users/xuhongxu/Public/ruby/control.rb&quot;</span>, <span class="string">&quot;r&quot;</span>) <span class="keyword">do</span> |<span class="params">it</span>|</span><br><span class="line">	<span class="keyword">while</span> line = it.gets</span><br><span class="line">		p line</span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment"># high abs</span></span><br><span class="line">File.open(<span class="string">&quot;/Users/xuhongxu/Public/ruby/control.rb&quot;</span>, <span class="string">&quot;r&quot;</span>) <span class="keyword">do</span> |<span class="params">f</span>|</span><br><span class="line">	lines = f.readlines</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment"># higher abs</span></span><br><span class="line">arr = File.readlines(<span class="string">&quot;/Users/xuhongxu/Public/ruby/control.rb&quot;</span>)</span><br><span class="line">p arr[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># write</span></span><br><span class="line">File.open(<span class="string">&#x27;path&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">do</span> |<span class="params">f</span>|</span><br><span class="line">    f &lt;&lt; <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">    f.puts <span class="string">&#x27;world&#x27;</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2022/11/05/scala-snippet-md/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2022-11-05 00:55:29
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/ruby/" title="ruby">
+                        #ruby
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="/2022/11/05/git-md/" target="_self">
+                <span>Next</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Primitive-elements"><span class="toc-text">Primitive elements</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#flow-control"><span class="toc-text">flow control</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#data-struct"><span class="toc-text">data struct</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object-oriend-Programming"><span class="toc-text">Object-oriend Programming</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#variable"><span class="toc-text">variable</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#method"><span class="toc-text">method</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#instance-method"><span class="toc-text">instance method</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#class-method"><span class="toc-text">class method</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#module"><span class="toc-text">module</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#exception"><span class="toc-text">exception</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#module-example"><span class="toc-text">module example</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Library"><span class="toc-text">Library</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
+      </div>
+    
+  </div>
+
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          <a title="github" target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © 2023 Oranges</a>
+        
+    </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+        
+    </div>
+  
+  
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="Search...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + ruby-snippet.md + '&url=' + http%3A%2F%2Fexample.com%2F2022%2F11%2F05%2Fruby-snippet-md%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2022/11/05/ruby-snippet-md/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
+  
+  
+<script src="/js/shares.js"></script>
+
+
+
+      </div>
+    </div>
+  </body>
+</html>
