@@ -11,7 +11,7 @@
   
   <title>
     
-      技术方案设计中要考虑的几个元素 
+      2023 年终总结与 2024 展望 
       
       
       |
@@ -147,40 +147,64 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">技术方案设计中要考虑的几个元素</div>
+      <div class="post-title">2023 年终总结与 2024 展望</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2022-11-12 19:11:41
+          2024-01-01 00:00:00
         </span>
         
-              <span class="post-tags">
-                <i class="iconfont icon-tags mr-10" title="Tags"></i>
-                
-                <span class="span--tag mr-8">
-                  <a href="/tags/design/" title="design">
-                    #design
-                  </a>
-                </span>
-                
-              </span>
-          
       </div>
       <div class="markdown-body">
-        <h2 id="1-Background-x2F-Introduction"><a href="#1-Background-x2F-Introduction" class="headerlink" title="1. Background &#x2F; Introduction"></a>1. Background &#x2F; Introduction</h2><p>为什么要做这件事</p>
-<h2 id="2-Requirements-vs-non-functional-requirements"><a href="#2-Requirements-vs-non-functional-requirements" class="headerlink" title="2. Requirements vs non-functional requirements"></a>2. Requirements vs non-functional requirements</h2><p>明确好需求和设计的目的</p>
-<h2 id="3-Proposed-solution-and-alternatives"><a href="#3-Proposed-solution-and-alternatives" class="headerlink" title="3.Proposed solution and alternatives"></a>3.Proposed solution and alternatives</h2><p>先说方案，然后表名自己做过 research，但别的选择没有我的好，借助架构图方便大家理解。Proposed solution 需要非常详细，需要包括数据协议与接口协议，相应的改动点。alternative 可以相对简单，但要明确优劣。<br>如果系统比较大，拆分成不同 components, 每个 components 包含 proposed soltion 与 alternatives。</p>
-<h2 id="4-Test-x2F-Monitoring-x2F-Metric"><a href="#4-Test-x2F-Monitoring-x2F-Metric" class="headerlink" title="4. Test &#x2F; Monitoring &#x2F; Metric"></a>4. Test &#x2F; Monitoring &#x2F; Metric</h2><p>怎么做测试，监控系统，哪些 metric 可以衡量项目的成功</p>
-<h2 id="5-Work-items"><a href="#5-Work-items" class="headerlink" title="5. Work items"></a>5. Work items</h2><p>预估每部分需要多长时间, 多少 engineer week。<br>ps: 知乎上搜索来的名词，竟然以 week 作为单位，羡慕</p>
-<h2 id="6-Questions-x2F-Meeting-notes"><a href="#6-Questions-x2F-Meeting-notes" class="headerlink" title="6. Questions &#x2F; Meeting notes"></a>6. Questions &#x2F; Meeting notes</h2><p>design review 时候记录一些别人的问题</p>
-<h2 id="7-Reference"><a href="#7-Reference" class="headerlink" title="7. Reference"></a>7. Reference</h2><p>相关的doc, 比如需要碰到的系统等等</p>
+        <h2 id="糟糕的-2023"><a href="#糟糕的-2023" class="headerlink" title="糟糕的 2023"></a>糟糕的 2023</h2><p>2022年10.1假期期间曾经情绪崩溃过，仔细思考了裸辞离开公司与继续留下来的利弊。那时候看了一些国内的接私活平台，国外的upwork, fivver等。最后不了了之，根因还是自己的英语，全栈能力不足，也不能接受没有稳定收入的生活，看着余额一点点减少的负面情绪会慢慢吞噬自己。</p>
+<p>fuck-the-word中，我曾问自己一个问题「继续留在公司，比如说1年后，会改变自己的想法吗？」。现在来看，有些改变了，有些又没有改变。</p>
+<h3 id="慢脚与工作与技术"><a href="#慢脚与工作与技术" class="headerlink" title="慢脚与工作与技术"></a>慢脚与工作与技术</h3><p>观点不变，即高压工作到中年被社会淘汰，尤其AI开始爆发之后，一个又一个产品开始颠覆世界，改变现有的模式，我更认为底层打工人被替代是一个必然结局，以前认为是35岁，现在认为是30岁。</p>
+<p>慢脚并不是完美的公司，我感恩于它让我经济独立。它有好的地方，也有很多不好的地方，究其根因还是对其员工的系统性的不尊重，不过这也是文明洼地普遍的模式。</p>
+<p>这一年在慢脚做的工作也是没头没尾的感觉，像浪费宝贵的时间打了一年杂。我不想再用其他团队做的狗屎工具了，我不想再花时间做一些没头没脑排版出来的所谓需求，我不想再为别人糟糕的工作兜底。</p>
+<p>另一点是，我对技术的认知变了。以前我想读guava的源码，我想读kafka源码，我要学屌炸天的scala, elixir，我觉得要写一手好代码最最重要，我觉得做基础架构，做中间件的都是乐于助人的大佬。原来有名的开源项目里也有很多粪坑，你花时间一行一行看没什么寄把用。原来废了很多时间学scala, elixir, 写了很多所谓的「笔记」，不去真正的使用，终究不能真正理解，终究会忘掉（就像很久没有联系的老同学，性格特征很容易想起来，但怎么也想不出姓名）。原来好的代码很难去写出来，并不是所有的代码都值得投入大量的精力令其趋向“完美”，我们现在写的东西都只是生命周期不过1，2年，不断经手n个人瞎几把改后变成的垃圾。原来并不是所有人都像huangli老师，dongliu老师一样真诚，IM对面的人并不都是尽力去帮你解决问题，有些甚至会抱着多一事不如少一事的心态去糊弄人。在经过几次被嘲讽与推脱（自己解释不清楚反而表现出一副很简单的样子，让我去google自己查）之后，我深刻意识到，不要做纯技术的人，不要变成他们那样，不要整天陷在无穷无尽的代码垃圾里。</p>
+<p>我开始讨厌与技术人员交流。剖析更深一点，更正向的表达是，<strong>我需要适应与不同的人去沟通，并找到合适的方式来促进协作</strong>。</p>
+<h3 id="驱动力来源"><a href="#驱动力来源" class="headerlink" title="驱动力来源"></a>驱动力来源</h3><p>面对晋升没有任何动力，冷静思考后倾向于认为我的动力来源并不是「晋升」这一个被别人控制以操纵牛马持续不断为公司输血的激励工具，而是驱使我不断摆脱外界的束缚与控制，从而达到内心自由的思维。仔细想想，从小到大的一些行为都能体现。小时候，曾经以为「属于」我的东西，被家人无情夺走，甚至破坏，自那时起，我希望独立起来。长大后，我希望尽最大努力少回家，摆脱「家」的负面影响与潜在控制，因而选择了比较远的大连去上学。之后，在大学内同样感受到了束缚，你不得不去应付一些形式主义狗屎，一些糟糕的课程，一些垃圾人（少数）。那时觉得，即使读研也是会碰到这些不好的东西吧。另一方面，我觉得那些数学，机器学习，电路，图形学等等东西，对自己没什么吸引力。而且自己迫切希望经济独立，可以自由自在的买一部分东西（后面也有一些冲动消费）。毅然决然的选择摆脱大学的环境，直接去工作。</p>
+<p>我希望愤怒成为另一个驱动力来源。愤怒于贵司内部做的一些把垃圾当宝贝的傻逼工具，愤怒于只有这一个选择而不得不用，愤怒于持续不断的被 IM 消息打扰，持续不断的去填以前埋下的坑……；我也非常厌恶开屏广告，弹窗广告，还有更恶心的 app 跳转，因此决定尽最大可能少用手机上的狗屎 app，比如淘宝，京东，拼多多，知乎，b 站。2024年，<strong>愤怒会帮助我做出有意义的决定，有意义的事情</strong>。</p>
+<h3 id="身体状态"><a href="#身体状态" class="headerlink" title="身体状态"></a>身体状态</h3><p>2022年有过几次崩溃的经历，经常熬夜到半夜3点，深夜emo。2023年变得严重了些，有一次早晨醒来甚至闪过一个从20楼跳下去的想法。依旧经常熬夜到3点，偶尔4, 5点，后面也付出了一定的代价，第一次感觉到了腰痛，以及由于免疫力低导致的一些事。</p>
+<p>我的心理问题感觉还是对现状与预期的不满。关注了很多阜新，银滩，大理，版纳的躺平 up 主，我曾经幻想过也去过那样的生活，但是我真的会享受其中吗？即使真的实现了，也大概率不会感到满足，快乐有波动，人生也有波动，你不可能在一个地方待到老。</p>
+<h3 id="搬家"><a href="#搬家" class="headerlink" title="搬家"></a>搬家</h3><p>10.1 期间搬到了离公司更近的地方（10km → 2km）。原来住的自如鸽子笼只有 8m²，且网络奇差，房租还 tmd 死贵。现在搬过来的地方大概 12m²，房租便宜了几百，缺点是没有自如的定期清洁，暖气，与电热水器，只有忽冷忽热的傻逼燃气热水器。</p>
+<p>搬家前后，陆陆续续买了几个大件：NAS 和 PC 电脑</p>
+<p>NAS 确实提升了一些生活体验。电视剧，电影，动漫直接全下载下来，不再需要去找不稳定的在线网站。</p>
+<p>PC 感觉并没有预想的那么有用，首先没有关注太多体积，收到货后才发现主机太大了；后来只玩了几天辐射 4，我的世界，没有在上面花太多的时间；编程体验非常差，有些 windows 的 jdk 有缺陷，跑不通代码，wsl 又非常折腾，真的不如直接用 mac。</p>
+<h3 id="尝试与改变"><a href="#尝试与改变" class="headerlink" title="尝试与改变"></a>尝试与改变</h3><ul>
+<li>side project 做了很少的进度，收益还是未知，也没有投入足够的精力</li>
+<li>仓鼠症犯了，一直收藏各种东西，最终怎么也不去看。 下半年在有意识的缓解，一直在做减法</li>
+<li>写作困难，重新拾起了 blog，记录每天看到的东西</li>
+</ul>
+<h2 id="2024-去做出更多改变"><a href="#2024-去做出更多改变" class="headerlink" title="2024 去做出更多改变"></a>2024 去做出更多改变</h2><p>可预期的是，房地产泡沫破裂，地方债务与地方银行破产，国际关系，外资逃离，失业率，社会治安会进一步恶化。<br>我所能做的就是，不要选择危险那条路，在黑暗中耐心等待，保有对未来的希望</p>
+<h3 id="side-project"><a href="#side-project" class="headerlink" title="side project"></a>side project</h3><p>既然别人能成功，一定存在一条通向罗马的路径，只要不断去尝试，终究能到达目的地</p>
+<ul>
+<li>wp广告套利</li>
+<li>小报童</li>
+</ul>
+<h3 id="独立技术栈"><a href="#独立技术栈" class="headerlink" title="独立技术栈"></a>独立技术栈</h3><ul>
+<li>English, react, node.js</li>
+<li>产品分析</li>
+</ul>
+<h3 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h3><ul>
+<li>慢慢来了，算了下一年的鱼油，维生素，叶黄素也才 1200元，尝试一年看效果</li>
+</ul>
+<h3 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h3><ul>
+<li>关注师北辰</li>
+</ul>
+<h3 id="效率"><a href="#效率" class="headerlink" title="效率"></a>效率</h3><ul>
+<li>充分使用 raycast，考虑订阅 Pro + GPT4.0 套餐</li>
+<li>尽最大努力去维护与捍卫自己的时间（—每个人的人生轨迹，财富积累，和成就很大程度上就是基于他们如何对待和捍卫自己的时间）</li>
+<li>工作中的提效工具已经有了一些思路，大概率通过 raycast 解决</li>
+</ul>
+<h3 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h3><p>与更多的牛人连接，多关注他们的作品，博客，twitter 交流<br>目前包括大圣，陈随易，八爷等等</p>
 
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-next">
             
-              <a href="/2022/11/05/hello-world/" target="_self">
+              <a href="/2023/12/24/commit-to-competence-in-this-coming-year/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>Prev</span>
               </a>
@@ -189,24 +213,13 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2022-11-12 19:11:41
+              2024-01-01 00:00:00
             </span>
             
-                  <span class="post-tags">
-                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
-                    
-                    <span class="span--tag mr-8">
-                      <a href="/tags/design/" title="design">
-                        #design
-                      </a>
-                    </span>
-                    
-                  </span>
-              
           </div>
           <div class="post-foot-prev">
             
-              <a href="/2023/12/11/reverse-engineering-ch3/" target="_self">
+              <a href="/2024/01/01/2024-1/" target="_self">
                 <span>Next</span>
                 <i class="iconfont icon-chevronright"></i>
               </a>
@@ -223,7 +236,7 @@
     <div class="title">Contents</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Background-x2F-Introduction"><span class="toc-text">1. Background &#x2F; Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Requirements-vs-non-functional-requirements"><span class="toc-text">2. Requirements vs non-functional requirements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Proposed-solution-and-alternatives"><span class="toc-text">3.Proposed solution and alternatives</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Test-x2F-Monitoring-x2F-Metric"><span class="toc-text">4. Test &#x2F; Monitoring &#x2F; Metric</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Work-items"><span class="toc-text">5. Work items</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Questions-x2F-Meeting-notes"><span class="toc-text">6. Questions &#x2F; Meeting notes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Reference"><span class="toc-text">7. Reference</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%9F%E7%B3%95%E7%9A%84-2023"><span class="toc-text">糟糕的 2023</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%85%A2%E8%84%9A%E4%B8%8E%E5%B7%A5%E4%BD%9C%E4%B8%8E%E6%8A%80%E6%9C%AF"><span class="toc-text">慢脚与工作与技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A9%B1%E5%8A%A8%E5%8A%9B%E6%9D%A5%E6%BA%90"><span class="toc-text">驱动力来源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BA%AB%E4%BD%93%E7%8A%B6%E6%80%81"><span class="toc-text">身体状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AC%E5%AE%B6"><span class="toc-text">搬家</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E4%B8%8E%E6%94%B9%E5%8F%98"><span class="toc-text">尝试与改变</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2024-%E5%8E%BB%E5%81%9A%E5%87%BA%E6%9B%B4%E5%A4%9A%E6%94%B9%E5%8F%98"><span class="toc-text">2024 去做出更多改变</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#side-project"><span class="toc-text">side project</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8B%AC%E7%AB%8B%E6%8A%80%E6%9C%AF%E6%A0%88"><span class="toc-text">独立技术栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%A5%E5%BA%B7"><span class="toc-text">健康</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E4%BD%9C"><span class="toc-text">写作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E7%8E%87"><span class="toc-text">效率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5"><span class="toc-text">连接</span></a></li></ol></li></ol>
       
     </div>
   </div>
@@ -509,12 +522,12 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E6%8A%80%E6%9C%AF%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1%E4%B8%AD%E8%A6%81%E8%80%83%E8%99%91%E7%9A%84%E5%87%A0%E4%B8%AA%E5%85%83%E7%B4%A0 + '&url=' + http%3A%2F%2Fexample.com%2F2022%2F11%2F12%2Fdesign%2F + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + 2023%20%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93%E4%B8%8E%202024%20%E5%B1%95%E6%9C%9B + '&url=' + http%3A%2F%2Fexample.com%2F2024%2F01%2F01%2F2023-to-2024%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2022/11/12/design/" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2024/01/01/2023-to-2024/" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         
