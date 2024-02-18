@@ -11,7 +11,7 @@
   
   <title>
     
-      技术方案设计中要考虑的几个元素 
+      archive_a: 2024/2 
       
       
       |
@@ -102,152 +102,217 @@
 
 
       <div class="flex-container">
-        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
-<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
 
+<!-- last: 按年份把文章分组，当前遍历到的年份 -->
+<!-- now: 当前遍历到的文章的发布年份 -->
 
-  <!-- LaTex Display -->
-
-  
-    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
-  
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      }
-    }
-  </script>
-
-
-
-
-
-  <!-- clipboard -->
-
-  
-    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
-  
-  
-<script src="/js/codeCopy.js"></script>
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
-  <div class="container post-details" id="post-details">
-    <div class="post-content">
-      <div class="post-title">技术方案设计中要考虑的几个元素</div>
-      <div class="post-attach">
-        <span class="post-pubtime">
-          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2022-11-12 19:11:41
-        </span>
-        
-              <span class="post-tags">
-                <i class="iconfont icon-tags mr-10" title="Tags"></i>
-                
-                <span class="span--tag mr-8">
-                  <a href="/tags/design/" title="design">
-                    #design
-                  </a>
-                </span>
-                
-              </span>
-          
-      </div>
-      <div class="markdown-body">
-        <h2 id="1-Background-x2F-Introduction"><a href="#1-Background-x2F-Introduction" class="headerlink" title="1. Background &#x2F; Introduction"></a>1. Background &#x2F; Introduction</h2><p>为什么要做这件事</p>
-<h2 id="2-Requirements-vs-non-functional-requirements"><a href="#2-Requirements-vs-non-functional-requirements" class="headerlink" title="2. Requirements vs non-functional requirements"></a>2. Requirements vs non-functional requirements</h2><p>明确好需求和设计的目的</p>
-<h2 id="3-Proposed-solution-and-alternatives"><a href="#3-Proposed-solution-and-alternatives" class="headerlink" title="3.Proposed solution and alternatives"></a>3.Proposed solution and alternatives</h2><p>先说方案，然后表名自己做过 research，但别的选择没有我的好，借助架构图方便大家理解。Proposed solution 需要非常详细，需要包括数据协议与接口协议，相应的改动点。alternative 可以相对简单，但要明确优劣。<br>如果系统比较大，拆分成不同 components, 每个 components 包含 proposed soltion 与 alternatives。</p>
-<h2 id="4-Test-x2F-Monitoring-x2F-Metric"><a href="#4-Test-x2F-Monitoring-x2F-Metric" class="headerlink" title="4. Test &#x2F; Monitoring &#x2F; Metric"></a>4. Test &#x2F; Monitoring &#x2F; Metric</h2><p>怎么做测试，监控系统，哪些 metric 可以衡量项目的成功</p>
-<h2 id="5-Work-items"><a href="#5-Work-items" class="headerlink" title="5. Work items"></a>5. Work items</h2><p>预估每部分需要多长时间, 多少 engineer week。<br>ps: 知乎上搜索来的名词，竟然以 week 作为单位，羡慕</p>
-<h2 id="6-Questions-x2F-Meeting-notes"><a href="#6-Questions-x2F-Meeting-notes" class="headerlink" title="6. Questions &#x2F; Meeting notes"></a>6. Questions &#x2F; Meeting notes</h2><p>design review 时候记录一些别人的问题</p>
-<h2 id="7-Reference"><a href="#7-Reference" class="headerlink" title="7. Reference"></a>7. Reference</h2><p>相关的doc, 比如需要碰到的系统等等</p>
-
-      </div>
-      
-        <div class="prev-or-next">
-          <div class="post-foot-next">
-            
-              <a href="/2022/11/05/hello-world/" target="_self">
-                <i class="iconfont icon-chevronleft"></i>
-                <span>Prev</span>
-              </a>
-            
-          </div>
-          <div class="post-attach">
-            <span class="post-pubtime">
-              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2022-11-12 19:11:41
-            </span>
-            
-                  <span class="post-tags">
-                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
-                    
-                    <span class="span--tag mr-8">
-                      <a href="/tags/design/" title="design">
-                        #design
-                      </a>
-                    </span>
-                    
-                  </span>
-              
-          </div>
-          <div class="post-foot-prev">
-            
-              <a href="/2023/12/11/reverse-engineering-ch3/" target="_self">
-                <span>Next</span>
-                <i class="iconfont icon-chevronright"></i>
-              </a>
-            
-          </div>
+<div class="container archives">
+  <div class="post-list">
+    
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2024</span>
+          </h2>
         </div>
       
-    </div>
+      <div class="post-item" title="2024-02月报">
+        <div class="time-m-d">02-02</div>
+        <div class="title">
+          <a href="/2024/02/02/2024-2/">
+            <span>2024-02月报</span>
+          </a>
+        </div>
+      </div>
     
-  <div id="btn-catalog" class="btn-catalog">
-    <i class="iconfont icon-catalog"></i>
-  </div>
-  <div class="post-catalog hidden" id="catalog">
-    <div class="title">Contents</div>
-    <div class="catalog-content">
-      
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Background-x2F-Introduction"><span class="toc-text">1. Background &#x2F; Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Requirements-vs-non-functional-requirements"><span class="toc-text">2. Requirements vs non-functional requirements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Proposed-solution-and-alternatives"><span class="toc-text">3.Proposed solution and alternatives</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Test-x2F-Monitoring-x2F-Metric"><span class="toc-text">4. Test &#x2F; Monitoring &#x2F; Metric</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Work-items"><span class="toc-text">5. Work items</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Questions-x2F-Meeting-notes"><span class="toc-text">6. Questions &#x2F; Meeting notes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Reference"><span class="toc-text">7. Reference</span></a></li></ol>
-      
-    </div>
-  </div>
-
-  
-<script src="/js/catalog.js"></script>
-
-
-
-
+      <div class="post-item" title="INDIE">
+        <div class="time-m-d">01-29</div>
+        <div class="title">
+          <a href="/2024/01/29/INDIE/">
+            <span>INDIE</span>
+          </a>
+        </div>
+      </div>
     
-      <div class="comments-container">
-        
-
-
-
-
-
-
-
+      <div class="post-item" title="QUALITY">
+        <div class="time-m-d">01-28</div>
+        <div class="title">
+          <a href="/2024/01/28/QUALITY/">
+            <span>QUALITY</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="RETIREMENT">
+        <div class="time-m-d">01-28</div>
+        <div class="title">
+          <a href="/2024/01/28/retirement/">
+            <span>RETIREMENT</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="How to be happy in daily work">
+        <div class="time-m-d">01-12</div>
+        <div class="title">
+          <a href="/2024/01/12/how-to-happy-in-work/">
+            <span>How to be happy in daily work</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="2024-01月报">
+        <div class="time-m-d">01-01</div>
+        <div class="title">
+          <a href="/2024/01/01/2024-1/">
+            <span>2024-01月报</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="2023 年终总结与 2024 展望">
+        <div class="time-m-d">01-01</div>
+        <div class="title">
+          <a href="/2024/01/01/2023-to-2024/">
+            <span>2023 年终总结与 2024 展望</span>
+          </a>
+        </div>
+      </div>
+    
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2023</span>
+          </h2>
+        </div>
+      
+      <div class="post-item" title="【翻译】在未来的一年里致力于能力提升">
+        <div class="time-m-d">12-24</div>
+        <div class="title">
+          <a href="/2023/12/24/commit-to-competence-in-this-coming-year/">
+            <span>【翻译】在未来的一年里致力于能力提升</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="工作日志模板">
+        <div class="time-m-d">12-23</div>
+        <div class="title">
+          <a href="/2023/12/23/work-log-template/">
+            <span>工作日志模板</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="2023-12周报">
+        <div class="time-m-d">12-21</div>
+        <div class="title">
+          <a href="/2023/12/21/2023-12/">
+            <span>2023-12周报</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="逆向工程.CH3.计分板原则.md">
+        <div class="time-m-d">12-11</div>
+        <div class="title">
+          <a href="/2023/12/11/reverse-engineering-ch3/">
+            <span>逆向工程.CH3.计分板原则.md</span>
+          </a>
+        </div>
+      </div>
+    
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2022</span>
+          </h2>
+        </div>
+      
+      <div class="post-item" title="技术方案设计中要考虑的几个元素">
+        <div class="time-m-d">11-12</div>
+        <div class="title">
+          <a href="/2022/11/12/design/">
+            <span>技术方案设计中要考虑的几个元素</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="Hello World">
+        <div class="time-m-d">11-05</div>
+        <div class="title">
+          <a href="/2022/11/05/hello-world/">
+            <span>Hello World</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="logic_stack.md">
+        <div class="time-m-d">11-05</div>
+        <div class="title">
+          <a href="/2022/11/05/logic-stack-md/">
+            <span>logic_stack.md</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="the_little_typer.md">
+        <div class="time-m-d">11-05</div>
+        <div class="title">
+          <a href="/2022/11/05/the-little-typer-md/">
+            <span>the_little_typer.md</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="scheme.md">
+        <div class="time-m-d">11-05</div>
+        <div class="title">
+          <a href="/2022/11/05/scheme-md/">
+            <span>scheme.md</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="computation.md">
+        <div class="time-m-d">11-05</div>
+        <div class="title">
+          <a href="/2022/11/05/computation-md/">
+            <span>computation.md</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="git.md">
+        <div class="time-m-d">11-05</div>
+        <div class="title">
+          <a href="/2022/11/05/git-md/">
+            <span>git.md</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="ruby-snippet.md">
+        <div class="time-m-d">11-05</div>
+        <div class="title">
+          <a href="/2022/11/05/ruby-snippet-md/">
+            <span>ruby-snippet.md</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="scala_snippet.md">
+        <div class="time-m-d">11-05</div>
+        <div class="title">
+          <a href="/2022/11/05/scala-snippet-md/">
+            <span>scala_snippet.md</span>
+          </a>
+        </div>
       </div>
     
   </div>
-
+</div>
 
         
 <div class="footer">
@@ -502,24 +567,6 @@
 
 
         
-  
-    <div class="share-icon tools-bar-item">
-      <a href="javascript: void(0)" id="share-icon">
-        <i class="iconfont iconshare"></i>
-      </a>
-      <div class="share-content hidden">
-        
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E6%8A%80%E6%9C%AF%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1%E4%B8%AD%E8%A6%81%E8%80%83%E8%99%91%E7%9A%84%E5%87%A0%E4%B8%AA%E5%85%83%E7%B4%A0 + '&url=' + http%3A%2F%2Fexample.com%2F2022%2F11%2F12%2Fdesign%2F + '" target="_blank" title="Twitter">
-            <i class="iconfont icon-twitter"></i>
-          </a>
-        
-        
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2022/11/12/design/" target="_blank" title="Facebook">
-            <i class="iconfont icon-facebooksquare"></i>
-          </a>
-        
-      </div>
-    </div>
   
   
 <script src="/js/shares.js"></script>
